@@ -10,11 +10,11 @@ import unittest
 from libext import HTMLTestRunnerNew
 
 from common import contants
-# from testcases.test_login import TestLogin
+# from testcases.test_login import LoginTest
 # from testcases import test_register
 # suite = unittest.TestSuite()  # 测试用例集合
 # loader = unittest.TestLoader()  # 加载用例
-# suite.addTest(loader.loadTestsFromTestCase(TestLogin))
+# suite.addTest(loader.loadTestsFromTestCase(LoginTest))
 # suite.addTest(loader.loadTestsFromModule(test_register))
 
 # 自动查找testcases目录下，以test开头的.py文件里面的测试类

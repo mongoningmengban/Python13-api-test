@@ -12,7 +12,7 @@ from common.config import ReadConfig
 
 class MysqlUtil:
 
-    def __init__(self):
+    def __init__(self, return_dict=False):
         # 想想这块如何放到配置文件里面去？？？
         # host = "test.lemonban.com"
         # user = "test"
@@ -26,14 +26,24 @@ class MysqlUtil:
         # 1,建立连接
         self.mysql = pymysql.connect(host=host, user=user, password=password, port=port)
         # 2，新建一个查询
-        self.cursor = self.mysql.cursor()
+        if return_dict:
+            self.cursor = self.mysql.cursor(pymysql.cursors.DictCursor)  # 指定每行数据以字典的形式返回
+        else:
+            self.cursor = self.mysql.cursor()  # 指定每行数据以元祖的形式返回
 
     def fetch_one(self, sql):
         # 执行SQL
         self.cursor.execute(sql)
         # 获取结果
-        result = self.cursor.fetchone()
+        result = self.cursor.fetchone()  # 返回元祖（）
         return result  # 返回结果
+
+    def fetch_all(self, sql):
+        # 执行SQL
+        self.cursor.execute(sql)
+        # 获取结果
+        results = self.cursor.fetchall()  # 返回列表 [(),()]
+        return results
 
     def close(self):
         self.cursor.close()  # 关闭查询
@@ -41,8 +51,15 @@ class MysqlUtil:
 
 
 if __name__ == '__main__':
-    mysql = MysqlUtil()
-    sql = "select max(mobilephone) from future.member"
-    result = mysql.fetch_one(sql)  # 返回的是tuple
-    print(result[0])  # 使用下标去获取值
+    # mysql = MysqlUtil()
+    # sql = "select max(mobilephone) from future.member"
+    # result = mysql.fetch_one(sql)  # 返回的是tuple
+    # print(result[0])  # 使用下标去获取值
+    # mysql.close()
+
+    mysql = MysqlUtil(return_dict=True)
+    sql = "select * from future.member limit 10"
+    results = mysql.fetch_all(sql)  # 返回的是列表里面放字典
+    for result in results:
+        print(result['Id'])
     mysql.close()

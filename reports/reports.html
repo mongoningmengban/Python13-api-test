@@ -116,19 +116,19 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">API</h1>
 <p class='attribute'><strong>测试人员 : </strong> Mongo</p>
-<p class='attribute'><strong>开始时间 : </strong> 2019-02-14 01:22:58</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:35.917053</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 21，通过 20，错误 1，通过率= 95.24%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-02-16 17:25:52</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:32.031759</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 24，通过 24，通过率= 100.00%</p>
 
 <p class='description'>API测试报告</p>
 </div>
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 95.24% }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 20 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 21 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 24 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 24 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -148,36 +148,88 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='errorClass warning'>
-    <td>unittest.loader._FailedTest</td>
-    <td class="text-center">1</td>
+<tr class='passClass warning'>
+    <td>test_api.APITest</td>
+    <td class="text-center">4</td>
+    <td class="text-center">4</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
-    <td class="text-center">1</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c1',1)" class="detail" id='c1'>详细</a></td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',4)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='ft1_1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_api</div></td>
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_1</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
-    <div id='div_ft1_1' class="collapse">  -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
-    <div id='div_ft1_1' class="collapse in" align="left">
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" align="left">
     <pre>
     
-ft1_1: ImportError: Failed to import test module: test_api
-Traceback (most recent call last):
-  File "C:\Program Files\Python37\lib\unittest\loader.py", line 434, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "C:\Program Files\Python37\lib\unittest\loader.py", line 375, in _get_module_from_name
-    __import__(name)
-  File "C:\Users\Alienware\Desktop\python13-api-test\testcases\test_api.py", line 10, in &lt;module&gt;
-    from ddt import ddt, data
-ModuleNotFoundError: No module named 'ddt'
+pt1_1: 开始执行第1用例
+第1用例执行结果：PASS
 
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in" align="left">
+    <pre>
+    
+pt1_2: 开始执行第2用例
+第2用例执行结果：PASS
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in" align="left">
+    <pre>
+    
+pt1_3: 开始执行第3用例
+第3用例执行结果：PASS
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse in" align="left">
+    <pre>
+    
+pt1_4: 开始执行第4用例
+第4用例执行结果：PASS
 
 
     </pre>
@@ -463,11 +515,11 @@ pt5_4: 开始执行第4用例
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
-    <td>21</td>
-    <td>20</td>
+    <td>24</td>
+    <td>24</td>
     <td>0</td>
-    <td>1</td>
-    <td>通过率：95.24%</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
 </tr>
 </table>
 

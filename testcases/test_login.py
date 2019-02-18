@@ -8,14 +8,13 @@
 
 import unittest
 
-from libext.ddt import ddt, data
+from libext.ddtnew import ddt, data
 
-from common import contants
+from common import contants, logger
 from common.do_excel import DoExcel
 from common.request import Request
-import logger
 
-logger = logger.get_logger(logger_name='LoginTest')
+logger = logger.get_logger(logger_name='case')
 # 一个接口一个类，一个类一个方法
 # 一个类，多个方法，多个接接口
 # 一个类，一个方法，全部接口 -------

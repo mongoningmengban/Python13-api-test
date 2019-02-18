@@ -7,7 +7,7 @@
 """
 import unittest
 
-from libext.ddt import ddt, data
+from libext.ddtnew import ddt, data
 
 from common import contants
 from common.do_excel import DoExcel
@@ -45,7 +45,7 @@ class RechargeTest(unittest.TestCase):
         except AssertionError as e:
             self.do_excel.write_result('recharge', case.id + 1, resp.text, 'FAIL')
             print("第{0}用例执行结果：FAIL".format(case.id))
-            raise e
+            raise
 
     @classmethod
     def tearDownClass(cls):

@@ -126,8 +126,8 @@ def mk_test_name(name, value, index=0):
     index = "{0:0{1}}".format(index + 1, index_len)
     if not is_trivial(value):
         from common.do_excel import Case
-        if isinstance(value, Case):
-            value = value.title
+        if isinstance(value, Case): # 这里判断是否是case的实例。
+            value = value.title # 如果是，就把value替换成title
             return "{0}_{1}_{2}".format(name, index, value)
         else:
             return "{0}_{1}".format(name, index)

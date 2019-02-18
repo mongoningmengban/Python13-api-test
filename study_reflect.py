@@ -23,6 +23,7 @@ class Girls:
 
 if __name__ == '__main__':
     g = Girls('mongo', 18)
+    print(g.__dict__)
     print(g.name)
     g.singe()
 

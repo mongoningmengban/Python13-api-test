@@ -8,9 +8,10 @@
 
 import requests
 
+from common import logger
 from common.config import ReadConfig
 
-
+logger = logger.get_logger('request')
 
 
 class Request:
@@ -25,8 +26,8 @@ class Request:
         url = pre_url + url  # URL拼接
         if data is not None and type(data) == str:
             data = eval(data)  # 如果是字符串就转成字典
-        # log.info('method: {0}  url: {1}'.format(method, url))
-        # log.info('data: {0}'.format(data))
+        logger.info('method: {0}  url: {1}'.format(method, url))
+        logger.info('data: {0}'.format(data))
         if method == 'GET':
             resp = self.session.request(method, url=url, params=data)  # 调用get方法，使用params传参
             # log.info('response: {0}'.format(resp.text))
@@ -34,10 +35,10 @@ class Request:
 
         elif method == 'POST':
             resp = self.session.request(method, url=url, data=data)  # 调用post方法，使用data传参
-            # log.info('response: {0}'.format(resp.text))
+            logger.info('response: {0}'.format(resp.text))
             return resp
         else:
-            # log.error('Un-support method !!!')
+            logger.error('Un-support method !!!')
             pass
 
     def close(self):
